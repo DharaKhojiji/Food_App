@@ -14,6 +14,7 @@ function App() {
   const hideCardHandler = () => {
     setCartIsShown(false);
   };
+// const [try,settry] = useState()
   return (
     <CartProvider>
       {cartIsShown && <Cart onClose={hideCardHandler} />}

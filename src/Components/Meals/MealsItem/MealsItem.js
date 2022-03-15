@@ -8,11 +8,13 @@ const MealsItem = (props) => {
 
   //   const price = `$ ${props.Mealdatas.price.toFixed(2)}`;
   const addCartHandler = (amount) => {
+    // alert();
+    console.log("hello line 17", props.Mealdatas.id, props.Mealdatas);
     cartCtx.addItem({
-      id: props.id,
-      name: props.name,
+      id: props.Mealdatas.id,
+      name: props.Mealdatas.name,
       amount: amount,
-      price: props.price,
+      price: props.Mealdatas.price,
     });
   };
   return (
@@ -25,8 +27,8 @@ const MealsItem = (props) => {
       <div>
         <MealsItemForm
           onAddTocart={addCartHandler}
-          id={props.id}
-        ></MealsItemForm>
+          id={props.id} />
+        
       </div>
     </li>
   );
